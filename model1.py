@@ -73,11 +73,11 @@ def RepMax(model,cancion):
 model.repMaxContraint = pyomo.Constraint(model.canciones,rule=RepMax)
 
 solvername='glpk'
-solverpath_folder='C:\\glpk\\w64' #does not need to be directly on c drive
-solverpath_exe='C:\\glpk\\w64\\glpsol' #does not need to be directly on c drive
+solverpath_folder='.\\glpk\\w64' #does not need to be directly on c drive
+solverpath_exe='.\\glpk\\w64\\glpsol' #does not need to be directly on c drive
 
 instance = model.create_instance('dataModel1.dat')
-opt = pyomo.SolverFactory(solvername)
+opt=pyomo.SolverFactory(solvername,executable=solverpath_exe)
 solver_results = opt.solve(instance)
 
 instance.pprint()
