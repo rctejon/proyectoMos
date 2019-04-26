@@ -88,5 +88,14 @@ param: horasMin := 0;
 
 param: horasMax := 3600;
 
+param: rockMin := 1;
 
+param: rockMax := 3;
 
+param: clasMin := 1;
+
+param: clasMax := 3;
+
+param: popuMin := 1;
+
+param: popuMax := 3;

@@ -15,12 +15,12 @@ model.horasMin = pyomo.Param()
 model.populares = pyomo.Param(model.canciones)
 model.rock = pyomo.Param(model.canciones)
 model.clasicas = pyomo.Param(model.canciones)
-model.rockMin = 1
-model.rockMax = 3
-model.popuMin = 1
-model.popuMax = 3
-model.clasMin = 1
-model.clasMax = 3
+model.rockMin = pyomo.Param()
+model.rockMax = pyomo.Param()
+model.popuMin = pyomo.Param()
+model.popuMax = pyomo.Param()
+model.clasMin = pyomo.Param()
+model.clasMax = pyomo.Param()
 
 #Variable del problema
 model.X = pyomo.Var(model.canciones, within=pyomo.NonNegativeIntegers)
